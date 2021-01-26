@@ -1,8 +1,8 @@
-/* 
+/*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
+Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
@@ -15,7 +15,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -32,7 +32,7 @@ body {
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -68,7 +68,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -91,7 +91,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -99,4 +99,704 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+/* MY CODE */
+
+/* GENERAL */
+h1 {
+  font-family: Catamaran;
+  font-size: 30px;
+  color: #111;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* HEADER */
+
+* {
+  text-decoration: none;
+}
+
+main {
+  padding-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+}
+
+header .header-brand {
+  font-family: Catamaran;
+  font-size: 24px;
+  font-weight: 900;
+  color: #111;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header nav ul {
+  /* THIS DOES NOT WORK IN FIREFOX
+  display: block;
+  width: fit-content;
+  */
+  display:table;
+  margin: 0 auto;
+}
+
+header nav ul li {
+  display: inline-block;
+  float: left;
+  list-style: none;
+  padding: 0 16px;
+}
+
+header nav ul li a {
+  font-family: Catamaran;
+  font-size: 16px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+header .header-link-special {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  header .header-brand {
+    font-size: 34px;
+    margin: 31px 0;
+    text-align: left;
+    line-height: 38px;
+    padding: 0 20px 0 40px;
+    border-right: 3px solid #111;
+    float: left;
+  }
+
+  header nav ul {
+    margin: 20px 0 0 20px;
+    float: left;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+    line-height: 60px;
+  }
+
+  header .header-link-special {
+    display:block;
+    float: right;
+    margin-right: 40px;
+    margin-top: 29px;
+    padding: 0 20px;
+    line-height: 38px;
+
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #111;
+    text-transform: uppercase;
+    border: 2px solid #111;
+  }
+}
+
+/*INDEX*/
+
+.index-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url("img/frontpage_me.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.vertical-center{
+  /*Just in case text changes*/
+  margin: 5px 5px;
+}
+
+.index-banner h1{
+  font-family: Catamaran;
+  font-size: 40px;
+  /* Too big for iphone screens.
+  The culprit is the word "computational"
+  font-size: 60px;
+  */
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+  line-height: 70px;
+}
+
+.index-banner h2{
+  font-family: Cormorant Garamond;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.index-links div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 16px 0;
+  width: calc(100% - 32px);
+  height: 100px;
+  background-color: #f2f2f2;
+}
+
+.index-links div h3 {
+  font-family: Catamaran;
+  font-size: 28px;
+  color: #111;
+  font-weight: 600;
+  line-height: 33px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1000px) {
+  .wrapper{
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .index-banner {
+    height: 450px;
+  }
+
+  .index-banner h1{
+    font-size: 60px;
+  }
+
+  .index-banner h2{
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .index-links{
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .index-links div{
+    margin: 20px 10px 0;
+    height: 220px;
+    float: left;
+  }
+
+  .index-boxlink-square {
+    width: calc(25% - 20px) !important;
+  }
+
+  .index-boxlink-rectangle {
+    width: calc(50% - 20px) !important;
+  }
+
+}
+
+/*FOOTER*/
+
+footer {
+  width: calc(100% - 80px);
+  padding: 40px 40px ;
+  margin-top: 20px;
+  background-color: #111;
+  overflow: hidden;
+}
+
+footer ul {
+  display: table;
+  float: left;
+  padding-left: 20px;
+}
+
+footer ul li {
+  display: block;
+  list-style: none;
+}
+
+footer ul li a {
+  font-family: Catamaran;
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+}
+
+.footer-links-papers {
+  display: none;
+}
+
+.footer-sm {
+  width: 60px;
+  float: right;
+}
+
+.footer-sm img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer-links-papers {
+    display: block;
+  }
+
+  footer ul {
+    padding-right: 40px;
+  }
+
+  footer ul li p {
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+/* PROJECTS */
+.projects-links{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.projects-links h1 {
+  font-family: Catamaran;
+  font-size: 30px;
+  color: #111;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projects-links div {
+  margin: 16px 16px 0;
+  width: calc(100% - 32px);
+  height: 100px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-links div p {
+  font-family: Catamaran;
+  font-size: 24px;
+  color: #111;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5px 5px;
+}
+
+.projects-contact-link {
+  width: calc(100%);
+  height: 100px;
+  background-color: #f2f2f2;
+}
+
+.projects-contact-link h2 {
+  font-family: Catamaran;
+  font-size: 24px;
+  color: #111;
+  font-weight: 800;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 15px 20px 0;
+}
+
+.projects-contact-link img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 5px;
+  width: 200px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .projects-links h1{
+    text-align: left;
+  }
+
+  .projects-links div{
+    margin: 10px 10px 10px 10px;
+    height: 230px;
+  }
+
+  .projects-boxlink-square {
+    width: calc(25% - 20px) !important;
+    float: left;
+  }
+
+  .projects-boxlink-rectangle {
+    width: calc(50% - 20px) !important;
+    float: left;
+  }
+
+  .projects-contact-link {
+    height: 150px;
+  }
+
+  .projects-contact-link h2 {
+    padding: 30px 20px 0;
+  }
+
+  .projects-contact-link img {
+    padding-top: 20px;
+  }
+}
+
+/* PROJECT */
+.project-splash h1 {
+  font-family: Catamaran;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-splash img {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.project-splash article h2 {
+  font-family: Catamaran;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+
+.project-splash article div {
+  font-family: Catamaran;
+  font-size: 18px;
+  line-height: 24px;
+  color: #111;
+  margin: 0 40px 20px 20px;
+}
+
+.project-splash article div p{
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .project-splash article div {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+}
+
+/* ABOUT */
+.about-splash img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.about-splash article h1 {
+  font-family: Catamaran;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+
+.about-splash article div {
+  font-family: Catamaran;
+  font-size: 18px;
+  line-height: 24px;
+  color: #111;
+  margin: 0 40px 20px 20px;
+}
+
+@media only screen and (min-width: 540px) {
+
+  .about-splash img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .about-splash img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+
+/* CONTACT */
+.contact-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(16vh);
+  background-image: url("img/contact_banner_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-banner h1{
+  font-family: Catamaran;
+  font-size: 40px;
+  /* Too big for iphone screens.
+  The culprit is the word "computational"
+  font-size: 60px;
+  */
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+  line-height: 70px;
+}
+
+.contact-links{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.contact-links div {
+  margin: 16px 16px 0;
+  width: calc(100% - 32px);
+  height: 100px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-link-icon{
+  width: 75px;
+}
+
+.contact-link-email{
+  width: 200px;
+  margin-left: 20px;
+}
+
+.contact-links p {
+  font-family: Catamaran;
+  font-size: 20px;
+  color: #111;
+  width: 200px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .contact-banner{
+    height: 300px;
+  }
+
+  .contact-banner h1{
+    font-size: 60px;
+  }
+
+}
+
+/*RESUME*/
+.resume-links{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.resume-links div {
+  margin: 16px 16px 0;
+  width: calc(100% - 32px);
+  height: 100px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-links h1 {
+  font-family: Catamaran;
+  font-size: 30px;
+  color: #111;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.resume-links div p {
+  font-family: Catamaran;
+  font-size: 24px;
+  color: #111;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5px 5px;
+}
+
+/*PUBLICATIONS*/
+.publications-links{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.publications-links h1 {
+  font-family: Catamaran;
+  font-size: 30px;
+  color: #111;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.publications-links h3 {
+  font-family: Catamaran;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+
+.publications-year {
+  display: flex;
+  flex-direction: column;
+}
+
+.publications-year h2 {
+  font-family: Catamaran;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+
+.publications-year h2::after {
+  display: inline-block;
+  content: "";
+  height:2px;
+  background: #111;
+  width: calc(100% - 105px);
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.citation-link {
+  padding: 0px 20px 20px 40px;
+  text-indent: -22px;
+}
+
+.citation-link cite{
+  font-style: normal;
+  font-family: Catamaran;
+  font-size: 18px;
+  color: #111;
+}
+
+/*RESEARCH*/
+.research-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  height: calc(100vh - 180px);
+  min-height: 500px;
+}
+
+.research-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc((100% / 3) - (10px) );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.research-link h2{
+  font-family: Catamaran;
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+}
+
+.research-main article div {
+  font-family: Catamaran;
+  font-size: 18px;
+  line-height: 24px;
+  color: #111;
+  margin: 0 40px 20px 20px;
+}
+
+.research-main article div p{
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .research-links {
+    flex-direction: row;
+    height: 500px;
+  }
+
+  .research-link{
+    width: 30%;
+    height: 500px;
+  }
+
 }
